@@ -1,0 +1,76 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Main2 = Instance.new("Frame")
+local Main = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local Submit = Instance.new("TextButton")
+local Imput = Instance.new("TextBox")
+local UICorner_2 = Instance.new("UICorner")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+Main2.Name = "Main2"
+Main2.Parent = ScreenGui
+Main2.BackgroundColor3 = Color3.fromRGB(108, 108, 108)
+Main2.Position = UDim2.new(0.302710831, 0, 0.266211599, 0)
+Main2.Size = UDim2.new(0, 401, 0, 256)
+
+Main.Name = "Main"
+Main.Parent = Main2
+Main.BackgroundColor3 = Color3.fromRGB(125, 125, 125)
+Main.Position = UDim2.new(0.0367895141, 0, 0.0657948256, 0)
+Main.Size = UDim2.new(0, 371, 0, 222)
+
+UICorner.Parent = Main
+
+Submit.Name = "Submit"
+Submit.Parent = Main
+Submit.BackgroundColor3 = Color3.fromRGB(125, 125, 125)
+Submit.Position = UDim2.new(0.229110509, 0, 0.590090096, 0)
+Submit.Size = UDim2.new(0, 200, 0, 50)
+Submit.Font = Enum.Font.SourceSans
+Submit.Text = "Submit"
+Submit.TextColor3 = Color3.fromRGB(0, 0, 0)
+Submit.TextScaled = true
+Submit.TextSize = 14.000
+Submit.TextWrapped = true
+Submit.MouseButton1Down:Connect(function()
+	if Imput.Text == "Key" or Imput.Text == "good" then
+        
+    
+
+Main2.Visible = false
+
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Githubforscripts/gg/main/Nexus%20v1"))() 
+   end
+end)
+
+Imput.Name = "Imput"
+Imput.Parent = Main
+Imput.BackgroundColor3 = Color3.fromRGB(125, 125, 125)
+Imput.Position = UDim2.new(0.194070071, 0, 0.198198184, 0)
+Imput.Size = UDim2.new(0, 226, 0, 61)
+Imput.Font = Enum.Font.SourceSans
+Imput.Text = "Key Here"
+Imput.TextColor3 = Color3.fromRGB(0, 0, 0)
+Imput.TextSize = 20.000
+
+UICorner_2.Parent = Main2
+
+-- Scripts:
+
+local function SAOM_fake_script() -- ScreenGui.Script 
+	local script = Instance.new('Script', ScreenGui)
+
+	frame = script.Parent.Main2
+	frame.Draggable = true
+	frame.Active = true
+	frame.Selectable = true
+end
+coroutine.wrap(SAOM_fake_script)()
